@@ -20,7 +20,7 @@ class OrderViewset(viewsets.ModelViewSet):
 
 
 class SignupView(generics.CreateAPIView):
-    queryset=User.object.all()
+    queryset=User.objects.all()
     serializer_class=UserSerializer
     permission_classes=[permissions.AllowAny]
 

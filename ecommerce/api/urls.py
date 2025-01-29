@@ -6,7 +6,7 @@ router.register(r'products',ProductViewset)
 router.register(r'orders',OrderViewset)
 
 urlpatterns=[
-    path("",(router.urls)),
+    path("",include(router.urls)),
     path('signup/',SignupView.as_view()),
     path('login/',LoginView.as_view())
 ]

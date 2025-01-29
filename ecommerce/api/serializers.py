@@ -3,7 +3,7 @@ from .models import Product, Order
 from django.contrib.auth.models import User
 
 class UserSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=User
         fields=['id','username','email','password']
         extra_kwargs={'password':{'write_only':True}}
@@ -15,7 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
         )
         return user
 class ProductSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Product
         fields='__all__'
 class OrderSerializer(serializers.ModelSerializer):
