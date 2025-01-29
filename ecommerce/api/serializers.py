@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Product, Order
 from django.contrib.auth.models import User
 
-class UserSerializers(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class meta:
         model=User
         fields=['id','username','email','password']
